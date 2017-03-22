@@ -1,11 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-
-    <title></title>
+      <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+      <link href="css/styles.css" rel="stylesheet" type="text/css">
+      <script src="js/jquery-3.2.0.js"></script>
+      <script src="js/scripts.js"></script>
+       <title>Conversions</title>
   </head>
   <body>
-    <h1>Gallons to Liters converter<h1>
-    <script src="js/scripts.js"></script>
+    <h1>Gallons/Liters converter<h1>
+    <form id="gallonsToLiters">
+      <div class="form-group">
+        <label for="gallon">GALLONS</label>
+        <input id="gallon" class="form-control" type="text">
+      </div>
+        <button type="submit" class="btn">Convert!</button>
+    </form>
+    <form id="litersToGallons">
+      <div class="form-group">
+        <label for="liters">LITERS</label>
+        <input id="liters" class="form-control" type="text">
+      </div>
+        <button type="submit" class="btn">Convert!</button>
+    </form>
+    <h2 id="answer"></h2>
   </body>
 </html>

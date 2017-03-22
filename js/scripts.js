@@ -11,15 +11,22 @@ return ((parseInt(prompt("Type the celcius that you want to convert fahrenheight
 
 convertCelciusToFahrenheight()*/
 
-var convertGallonsToLiters = function() {
-   alert(parseFloat(prompt("Type in the gallons you want to convert into liters")*3.785411784))
+var convertGallonsToLiters = function(input) {
+   return input*3.785411784;
 }
 
 // convertGallonsToLiters();
 
 
-var convertLitersToGallons = function() {
-   alert(parseFloat(prompt("Type in the liters you want to convert into gallons")/3.785411784))
-}
+// var convertLitersToGallons = function() {
+//    alert(parseFloat(prompt("Type in the liters you want to convert into gallons")/3.785411784))
+// }
 
-convertLitersToGallons();
+$(document).ready(function(){
+  $('#gallonsToLiters').submit(function(event){
+    var gallons = parseInt($("#gallon").val());
+    gallons = convertGallonsToLiters(gallons);
+    $('#answer').text(gallons);
+    event.preventDefault();
+  });
+});
